@@ -16,10 +16,14 @@ building blocks
 7.0 - Utilities: utilities and helper classes with ability to override anything 
 which goes before in the triangle, eg. hide helper class
         - Color     
---------------------------------------------------------------*/                  
+--------------------------------------------------------------*/  
+
+
+
 /*--------------------------------------------------------------                  
    3.0 - GENERIC                                                                  
--------------------------------------------------------------- */                 
+-------------------------------------------------------------- */   
+
 /* ----- UNIVERSAL ----- */
 
 *, 
@@ -32,38 +36,56 @@ which goes before in the triangle, eg. hide helper class
     box-sizing: border-box;
 }
 
-* {
-    font: 16px 'Open Sans', sans-serif;
-    font-weight: 400;
-    line-height: 22px;
-    color: #000000;
+html {
+    font: .85rem 'Source Sans Pro', sans-serif;
+    line-height: 1.6em;
 }
-
-/* html {
-    font-size: .9rem;
-} */
 
 /*--------------------------------------------------------------
    4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+li,
+h1 {
+    font-weight: 400;
+}
+
 h1,
-h2 {
-    font-weight: 700;
+p {
+    line-height: 1em;
 }
 
 /* ----- TYPOGRAPHY ----- */
 
-h1 {
-    font-size: 75px;
-    /* font-size: 3.25rem; */
-    line-height: 102px;
-    text-align: center;
+@media screen and (min-width: 768px) {
+
 }
 
-h2 {
-    font-size: 45px;
-    line-height: 61px;
+@media screen and (min-width: 1024px) {
+    li {
+        font-size: .87rem;
+        line-height: 1.25em;
+    }
+    
+    h1 {
+        font-size: 4.5rem;
+        margin: 2.5em 0 .25em;
+    }
+    
+    h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1em;
+        text-transform: uppercase;
+        color: #1EA78D;
+    }
+    
+    h3 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.56em;
+        color: #1E1E1E;
+    }
 }
 
 
@@ -161,54 +183,6 @@ h2 {
         padding:10px;
     }
 
-    .col-md-1 {
-        width: calc(100% * 1 / 12);
-    }
-
-    .col-md-2 {
-        width: calc(100% * 2 / 12);
-    }
-
-    .col-md-3 {
-        width: calc(100% * 3 / 12);
-    }
-
-    .col-md-4 {
-        width: calc(100% * 4 / 12);
-    }
-
-    .col-md-5 {
-        width: calc(100% * 5 / 12);
-    }
-
-    .col-md-6 {
-        width: calc(100% * 6 / 12);
-    }
-
-    .col-md-7 {
-        width: calc(100% * 7 / 12);
-    }
-
-    .col-md-8 {
-        width: calc(100% * 8 / 12);
-    }
-
-    .col-md-9 {
-        width: calc(100% * 9 / 12);
-    }
-
-    .col-md-10 {
-        width: calc(100% * 10 / 12);
-    }
-
-    .col-md-11 {
-        width: calc(100% * 11 / 12);
-    }
-
-    .col-md-12 {
-        width: calc(100% * 12 / 12);
-    }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -271,19 +245,116 @@ h2 {
    6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-.row:last-child {
+#features p,
+#works p {
+    color: #717982;
+}
+
+/* ----- NAV ----- */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* ----- HERO ----- */
+
+#home > div:first-child {
+    background-color: #10443F;
+}
+
+#home > div:last-child {
+    background-color: #104F41;
+}
+
+#home {
+    text-align: center;
+    background-color: #104F41;
+    color: #fff;
+}
+
+#home p {
+    font-size: 1.25rem;
+    margin: .25em 0;
+}
+
+#home p:first-child {
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 1em;
+}
+
+#home p:first-child span {
+    color: #1EA78D;
+}
+
+#home p:last-child {
+    display: inline-block;
+    position : relative;
+    top: 0;
+    left: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+#home p:last-child:before,
+#home p:last-child:after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: #1EA78D;
+    display: block;
+    position: absolute;
+    top: 5px;
+}
+
+#home p:last-child:before {
+    left: -30px;
+}
+
+#home p:last-child:after {
+    right: -30px;
+}
+
+/* ----- FEATURES ----- */
+
+#features {
+    background-color: #F4F7F9;
+}
+
+#features p {
+    font-weight: 400;
+    font-size: .87rem;
+    line-height: 1.56em;
+}
+
+/* ----- WORKS ----- */
+
+#works p {
+    font-weight: 700;
+    font-size: 1.13rem;
+    line-height: 2em;
+    text-align: center;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+    background-color: #1EA78D;
+}
+
+footer p {
+    font-weight: 400;
+    font-size: .87rem;
+    line-height: 1.56em;
+    color: #FFFFFF;
+}
+
+/*--------------------------------------------------------------
+   7.0 - UTILITY
+-------------------------------------------------------------- */
+
+.col-center {
     justify-content: center;
 }
-#bg-hand {
-    background: url(../img/hand.jpg) no-repeat center;
-    -webkit-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    background-clip: content-box;
-}
-
-
-
-
