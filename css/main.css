@@ -57,35 +57,47 @@ p {
 
 /* ----- TYPOGRAPHY ----- */
 
-@media screen and (min-width: 768px) {
-
+li {
+    font-size: 1.2rem;
+    line-height: 1.25em;
 }
 
+h1 {
+    font-size: 4.4rem;
+    margin-bottom: 0;
+}
+
+
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #1EA78D;
+    text-align: center;
+    padding-bottom: .75em;
+    border-bottom: .05em solid #717982;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.56em;
+    color: #1E1E1E;
+}
+
+
 @media screen and (min-width: 1024px) {
-    li {
-        font-size: .87rem;
-        line-height: 1.25em;
-    }
-    
     h1 {
         font-size: 4.5rem;
         margin: 2.5em 0 .25em;
     }
+
+    /* li {
+        font-size: 1rem;
+        line-height: 1.25em;
+    } */
     
-    h2 {
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 1em;
-        text-transform: uppercase;
-        color: #1EA78D;
-    }
-    
-    h3 {
-        font-weight: 700;
-        font-size: 1.25rem;
-        line-height: 1.56em;
-        color: #1E1E1E;
-    }
 }
 
 
@@ -111,14 +123,8 @@ p {
     max-width: 100%;
 }
 
-[class*='col-'] div {
-    /* background-color: gray; */
-    height: 100%;
-    padding: 10px;
-}
-
 [class*='col-'] {
-    padding: 10px 5px;
+    padding: .5em .5em;
 }
 
 .col-sm-1 {
@@ -170,10 +176,6 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-    html {
-        /* font-size: 1.5rem; */
-        font-size: 25px;
-    }
 
     .wrapper {
         width: 80%;
@@ -183,12 +185,60 @@ p {
         padding:10px;
     }
 
+    .col-md-1 {
+        width: calc(100% * 1 / 12);
+    }
+
+    .col-md-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-md-3 {
+        width: calc(100% * 3 / 12);
+    }
+
+    .col-md-4 {
+        width: calc(100% * 4 / 12);
+    }
+
+    .col-md-5 {
+        width: calc(100% * 5 / 12);
+    }
+
+    .col-md-6 {
+        width: calc(100% * 6 / 12);
+    }
+
+    .col-md-7 {
+        width: calc(100% * 7 / 12);
+    }
+
+    .col-md-8 {
+        width: calc(100% * 8 / 12);
+    }
+
+    .col-md-9 {
+        width: calc(100% * 9 / 12);
+    }
+
+    .col-md-10 {
+        width: calc(100% * 10 / 12);
+    }
+
+    .col-md-11 {
+        width: calc(100% * 11 / 12);
+    }
+
+    .col-md-12 {
+        width: calc(100% * 12 / 12);
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
 
     .wrapper {
-        width: 70%;
+        width: 80%;
     }
 
     .col-lg-1 {
@@ -252,12 +302,56 @@ p {
 
 /* ----- NAV ----- */
 
+@media screen and (min-width: 1024px) { 
+    nav {
+        display: flex;
+        justify-content: right;
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: .1em solid #fff;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
 }
 
+li {
+    display: inline;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
 /* ----- HERO ----- */
+
+@media screen and (min-width: 1024px) {
+    #home p {
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 1em;
+        margin: .25em 0;
+    }
+
+    #home img {
+        display: flex;
+        align-content: flex-start;
+    }
+
+    header > div:last-child {
+        padding-bottom: 6em;
+    }
+}
 
 #home > div:first-child {
     background-color: #10443F;
@@ -273,18 +367,22 @@ nav ul {
     color: #fff;
 }
 
+img {
+    padding: 1em;
+}
+
+header > div:last-child {
+    padding: 7em 0 6em 0;
+}
+
 #home p {
-    font-size: 1.25rem;
+    font-size: 2.3rem;
+    font-weight: 300;
+    line-height: 1em;
     margin: .25em 0;
 }
 
-#home p:first-child {
-    font-weight: 300;
-    font-size: 3rem;
-    line-height: 1em;
-}
-
-#home p:first-child span {
+#home span {
     color: #1EA78D;
 }
 
@@ -328,6 +426,9 @@ nav ul {
     font-size: .87rem;
     line-height: 1.56em;
 }
+#features {
+    padding: 3em 0 3em 0;
+}
 
 /* ----- WORKS ----- */
 
@@ -336,6 +437,10 @@ nav ul {
     font-size: 1.13rem;
     line-height: 2em;
     text-align: center;
+}
+
+#works {
+    padding: 3em 0 4em 0;
 }
 
 /* ----- FOOTER ----- */
@@ -349,6 +454,10 @@ footer p {
     font-size: .87rem;
     line-height: 1.56em;
     color: #FFFFFF;
+}
+
+footer ul {
+    padding-left: 0;
 }
 
 /*--------------------------------------------------------------
