@@ -82,9 +82,9 @@ h2 {
     text-transform: uppercase;
     text-align: center;
     color: #1EA78D;
-    padding-bottom: .75em;
+    /* padding-bottom: .75em;
     border-bottom: .05em solid #717982;
-    display: inline-block;
+    display: inline-block; */
 }
 
 h3 {
